@@ -28,7 +28,7 @@ def cycle(ids):
         try:
             logout_request(cred[0])
             print ("Logged out.")
-        except OSError:
+        except:
             print ("Wi-fi not Connected or Server Down!")
 
 
