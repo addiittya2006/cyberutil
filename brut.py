@@ -13,13 +13,11 @@ def load_id():
 def main(ids):
     p = argv[1]
     fw = open("idsw.txt", "w")
-    i=0
     try:
         for line in ids:
-            i=i+1
-            print (str(i)+" checking for "+line[0])
+            print ("Checking for: "+line[0])
             if login_request(line[0], p):
-                print("Succesful for: "+line[0])
+                print("Successful for: "+line[0])
                 fw = open("idsw.txt", "a")
                 fw.write(line[0]+" "+p+"\n")
                 fw.close()
