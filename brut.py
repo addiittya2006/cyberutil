@@ -1,6 +1,6 @@
 from sys import argv
 import os
-from cyber import *
+from cybercheck import *
 
 id_file = os.path.dirname(__file__)+'user.txt'
 
@@ -22,8 +22,10 @@ def main(ids):
                 fw.write(line[0]+" "+p+"\n")
                 fw.close()
                 logout_request(line[0])
+    except KeyboardInterrupt:
+        print("Stopped. Written to\'idsw.txt\'.")
     except Exception:
-        raise
+        print("Some Error Occured.")
     finally:
         fw.close()
 
